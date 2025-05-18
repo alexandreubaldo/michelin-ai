@@ -1,0 +1,2 @@
+automatic delegation by vendor
+organise obligations by vendor, by contract, by type

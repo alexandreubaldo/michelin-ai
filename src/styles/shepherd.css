@@ -1,0 +1,80 @@
+.shepherd-theme-custom {
+  --shepherd-theme-primary: #083264;
+  --shepherd-text-color: #333;
+  --shepherd-bg: #fff;
+  --shepherd-border-radius: 8px;
+  --shepherd-padding: 1.5rem;
+  --shepherd-arrow-size: 1rem;
+}
+
+.shepherd-theme-custom .shepherd-content {
+  border-radius: var(--shepherd-border-radius);
+  padding: var(--shepherd-padding);
+  background: var(--shepherd-bg);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.shepherd-theme-custom .shepherd-text {
+  color: var(--shepherd-text-color);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.shepherd-theme-custom .shepherd-header {
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+.shepherd-theme-custom .shepherd-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--shepherd-theme-primary);
+}
+
+.shepherd-theme-custom .shepherd-cancel-icon {
+  color: #666;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.shepherd-theme-custom .shepherd-footer {
+  padding: 0;
+  margin-top: 1.5rem;
+}
+
+.shepherd-theme-custom .shepherd-button {
+  background: var(--shepherd-theme-primary);
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.shepherd-theme-custom .shepherd-button:not(:disabled):hover {
+  background: #062a52;
+}
+
+.shepherd-theme-custom .shepherd-button.shepherd-button-secondary {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.shepherd-theme-custom .shepherd-button.shepherd-button-secondary:not(:disabled):hover {
+  background: #d1d5db;
+}
+
+.shepherd-theme-custom .shepherd-arrow {
+  border-width: var(--shepherd-arrow-size);
+}
+
+.shepherd-theme-custom .shepherd-arrow:before {
+  border-width: calc(var(--shepherd-arrow-size) - 2px);
+}
+
+.shepherd-modal-overlay-container.shepherd-modal-is-visible {
+  opacity: 0.5;
+  background: #000;
+} 
