@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -23,9 +23,16 @@ export function ProductCatalogUpload({ onClose }: { onClose: () => void }) {
   const [localCertifications, setLocalCertifications] = useState(certifications.filter(cert => cert.tireModelId === "tire-001"));
   const { toast } = useToast();
 
-  // Get certifications for the first tire model (Pilot Sport 5)
-  const tireModelCertifications = certifications.filter(cert => cert.tireModelId === "tire-001");
-  const tireModel = tireModels.find(t => t.id === "tire-001");
+  // Memoize the certifications and tire model calculations
+  const tireModelCertifications = useMemo(() => 
+    certifications.filter(cert => cert.tireModelId === "tire-001"),
+    []
+  );
+
+  const tireModel = useMemo(() => 
+    tireModels.find(t => t.id === "tire-001"),
+    []
+  );
 
   const simulateUpload = () => {
     if (!fileName) return;

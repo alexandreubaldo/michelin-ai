@@ -31,7 +31,7 @@ export function ChatDrawer({ isOpen, setIsOpen }: ChatDrawerProps) {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: "welcome",
-      content: "Hello Jane! How can I help you with your contracts today?",
+      content: "Hello Jane! How can I help you with your certifications today?",
       isUser: false,
       timestamp: new Date(),
     },
@@ -94,12 +94,12 @@ export function ChatDrawer({ isOpen, setIsOpen }: ChatDrawerProps) {
   const getAIResponse = (userInput: string): string => {
     const input = userInput.toLowerCase();
     
-    if (input.includes("contract") && input.includes("sync")) {
-      return "I've checked the ERP system. All contracts are currently synchronized. The last sync was completed 10 minutes ago.";
+    if (input.includes("certification") && input.includes("sync")) {
+      return "I've checked the ERP system. All certifications are currently synchronized. The last sync was completed 10 minutes ago.";
     } else if (input.includes("overdue")) {
       return "OVERDUE_CARDS";
     } else if (input.includes("performance") || input.includes("sla")) {
-      return "Currently tracking 12 SLAs across vendor contracts. All performance metrics are within acceptable ranges except for the Cloud Storage Provider which is showing 98.7% uptime (target: 99.9%).";
+      return "Currently tracking 12 SLAs across vendor certifications. All performance metrics are within acceptable ranges except for the Cloud Storage Provider which is showing 98.7% uptime (target: 99.9%).";
     } else {
       return "I can help you to understand product catalogues, track certifications, or monitor performance measurements. What specific information would you like me to provide?";
     }
@@ -160,7 +160,7 @@ export function ChatDrawer({ isOpen, setIsOpen }: ChatDrawerProps) {
                     <CardHeader className="bg-red-50 p-4">
                       <CardTitle className="flex items-center gap-2 text-red-600">
                         <AlertCircle className="h-5 w-5" />
-                        Overdue Obligation
+                        Overdue Certification
                       </CardTitle>
                     </CardHeader>
                     <CardContent className="p-4">

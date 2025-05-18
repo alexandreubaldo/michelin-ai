@@ -45,7 +45,7 @@ export function Header() {
                 <div>
                   <p className="font-medium text-sm">ERP Sync Completed</p>
                   <p className="text-xs text-muted-foreground mt-1">
-                    All contracts successfully synchronized from SAP
+                    All certifications successfully synchronized from SAP
                   </p>
                 </div>
               </DropdownMenuItem>
@@ -61,7 +61,7 @@ export function Header() {
                 <div>
                   <p className="font-medium text-sm">Sync Warning</p>
                   <p className="text-xs text-muted-foreground mt-1">
-                    3 contracts have conflicting data with ERP system
+                    3 certifications have conflicting data with ERP system
                   </p>
                 </div>
               </DropdownMenuItem>

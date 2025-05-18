@@ -43,9 +43,9 @@ export function Sidebar() {
             />
             <SidebarItem
               icon={File}
-              label="Contracts"
-              href="/contracts"
-              active={currentPath.startsWith("/contracts")}
+              label="Certifications"
+              href="/certifications"
+              active={currentPath.startsWith("/certifications")}
             />
             <SidebarItem
               icon={FileCheck}

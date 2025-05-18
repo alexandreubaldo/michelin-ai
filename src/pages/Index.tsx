@@ -36,7 +36,7 @@ const Index = () => {
           ) : (
             <>
               <div className="flex justify-between items-center mb-6">
-                <h1 className="text-2xl font-bold text-gray-800">Contract Management</h1>
+                <h1 className="text-2xl font-bold text-gray-800">Certification Management</h1>
                 <div className="flex gap-2">
                   <Button 
                     variant="outline"
@@ -44,7 +44,7 @@ const Index = () => {
                     onClick={() => setShowUpload(true)}
                   >
                     <Upload className="mr-2 h-4 w-4" />
-                    Upload Contract
+                    Upload Certification
                   </Button>
                   <Button 
                     onClick={() => setIsChatOpen(true)}

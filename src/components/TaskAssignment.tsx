@@ -30,18 +30,18 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { format } from "date-fns";
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
-import { users, contracts } from "../utils/mockData";
+import { users, certifications } from "../utils/mockData";
 
 export function TaskAssignment() {
   const [date, setDate] = useState<Date>();
-  const [selectedContract, setSelectedContract] = useState("");
+  const [selectedCertification, setSelectedCertification] = useState("");
   const [selectedUser, setSelectedUser] = useState("");
   const { toast } = useToast();
 
   const handleTaskAssignment = (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (!selectedContract || !selectedUser || !date) {
+    if (!selectedCertification || !selectedUser || !date) {
       toast({
         title: "Missing Information",
         description: "Please fill all required fields.",
@@ -65,15 +65,15 @@ export function TaskAssignment() {
       <CardContent>
         <form onSubmit={handleTaskAssignment} className="space-y-4">
           <div className="space-y-2">
-            <Label htmlFor="contract">Contract</Label>
-            <Select value={selectedContract} onValueChange={setSelectedContract}>
-              <SelectTrigger id="contract">
-                <SelectValue placeholder="Select contract" />
+            <Label htmlFor="certification">Certification</Label>
+            <Select value={selectedCertification} onValueChange={setSelectedCertification}>
+              <SelectTrigger id="certification">
+                <SelectValue placeholder="Select certification" />
               </SelectTrigger>
               <SelectContent>
-                {contracts.map((contract) => (
-                  <SelectItem key={contract.id} value={contract.id}>
-                    {contract.name}
+                {certifications.map((certification) => (
+                  <SelectItem key={certification.id} value={certification.id}>
+                    {certification.tireModelName}
                   </SelectItem>
                 ))}
               </SelectContent>
